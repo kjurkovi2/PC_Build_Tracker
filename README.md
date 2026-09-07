@@ -6,11 +6,11 @@ Korisnik može kreirati više "buildova" (konfiguracija računala), svakom dodav
 
 ## Video prezentacija
 
-[https://youtu.be/jmbnLqLXB1E](https://youtu.be/jmbnLqLXB1E)
+[Link na video prezentaciju na YouTubeu](https://youtu.be/jmbnLqLXB1E)
 
 ## Usecase dijagram
 
-![usecase dijagram](pc_build_tracker.png)
+[usecase dijagram](pc_build_tracker.png)
 
 ## Funkcionalnosti
 

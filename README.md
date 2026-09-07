@@ -12,21 +12,22 @@ Korisnik može kreirati više "buildova" (konfiguracija računala), svakom dodav
 
 - Kreiranje, pregled, uređivanje i brisanje PC builda
 - Dodavanje i brisanje komponenti unutar builda
-- Automatski izračun ukupne cijene builda i raspodjele troška po kategoriji komponenti
+- Automatski izračun ukupne cijene builda 
 - REST API (JSON) s odvojenim frontendom koji ga koristi preko `fetch`-a
 
-## Tehnologije
+## Alati i tehnologije
 
+- Lucidchart za izradu dijagrama
 - Python / Flask
-- PonyORM + SQLite
-- HTML / Bootstrap 5 / vanilla JavaScript
+- PonyORM / SQLite
+- HTML / Bootstrap / JavaScript
 - Docker / Docker Compose
 
 ## Pokretanje lokalno (Docker)
 
 ```bash
-git clone <URL_repoa>
-cd pc_build_tracker
+git clone https://github.com/kjurkovi2/PC_Build_Tracker.git
+cd PC_Build_Tracker
 docker compose up --build
 ```
 
@@ -52,5 +53,5 @@ python app.py
 | DELETE | `/api/buildovi/<id>` | Brisanje builda |
 | POST | `/api/buildovi/<id>/komponente` | Dodavanje komponente |
 | DELETE | `/api/komponente/<id>` | Brisanje komponente |
-| GET | `/api/buildovi/<id>/ukupna-cijena` | Ukupna cijena i raspodjela po kategoriji |
+| GET | `/api/buildovi/<id>/ukupna-cijena` | Ukupna cijena builda |
 | GET | `/api/kategorije` | Popis dopuštenih kategorija komponenti |

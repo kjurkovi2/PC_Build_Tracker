@@ -10,7 +10,7 @@ Korisnik može kreirati više "buildova" (konfiguracija računala), svakom dodav
 
 ## Usecase dijagram
 
-[usecase dijagram](pc_build_tracker.png)
+![usecase dijagram](pc_build_tracker.png)
 
 ## Funkcionalnosti
 

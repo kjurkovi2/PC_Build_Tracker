@@ -4,6 +4,10 @@ Web aplikacija za konfiguraciju i praćenje odabira PC komponenti u svrhu planir
 
 Korisnik može kreirati više "buildova" (konfiguracija računala), svakom dodavati komponente (CPU, GPU, RAM, itd.) uz cijenu i proizvođača, te pratiti ukupnu cijenu build-a u stvarnom vremenu.
 
+## Usecase dijagram
+
+![usecase dijagram](pc_build_tracker.png)
+
 ## Funkcionalnosti
 
 - Kreiranje, pregled, uređivanje i brisanje PC builda

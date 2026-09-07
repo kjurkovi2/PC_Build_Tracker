@@ -1,0 +1,132 @@
+<!doctype html>
+
+<html lang="hr" data-bs-theme="dark">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>PC Build Tracker</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="/css/style.css" rel="stylesheet">
+</head>
+
+
+<body>
+
+<nav class="navbar navbar-dark bg-dark mb-4">
+    <div class="container">
+        <span class="navbar-brand mb-0 h1">PC Build Tracker</span>
+    </div>
+</nav>
+
+<div class="container pb-5">
+    <div class="row g-4">
+
+        <div class="col-md-4">
+            <div class="card mb-3">
+                <div class="card-header">Novi build</div>
+                <div class="card-body">
+                    <form id="build-forma">
+                        <div class="mb-2">
+                            <input type="text" class="form-control" id="build-naziv" placeholder="Naziv builda"
+                                   required>
+                        </div>
+                        <div class="mb-2">
+                            <input type="text" class="form-control" id="build-opis" placeholder="Opis (opcionalno)">
+                        </div>
+                        <button type="submit" class="btn btn-success w-100">Kreiraj build</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="card">
+                <div class="card-header d-flex justify-content-between align-items-center">
+                    <span>Moji buildovi</span>
+                    <span id="broj-buildova" class="badge text-bg-secondary">0</span>
+                </div>
+                <ul id="lista-buildova" class="list-group list-group-flush"></ul>
+            </div>
+        </div>
+
+        <div class="col-md-8">
+            <div id="prazno-stanje" class="text-center text-muted mt-5">
+                <p>Odaberi build s lijeve strane, ili kreiraj novi.</p>
+            </div>
+
+            <div id="detalji-builda" class="d-none">
+                <div class="d-flex justify-content-between align-items-start mb-3">
+                    <div>
+                        <h3 id="detalj-naziv" class="mb-0"></h3>
+                        <p id="detalj-opis" class="text-muted mb-0"></p>
+                    </div>
+                    <div class="text-end">
+                        <div class="fs-4 fw-bold" id="detalj-ukupno">0,00 €</div>
+                        <button id="uredi-build-btn" class="btn btn-sm btn-outline-secondary mt-1">Uredi build</button>
+                        <button id="obrisi-build-btn" class="btn btn-sm btn-outline-danger mt-1">Obriši build</button>
+                    </div>
+                </div>
+
+                <form id="uredi-build-forma" class="card card-body mb-3 d-none">
+                    <div class="mb-2">
+                        <input type="text" class="form-control" id="uredi-build-naziv" required>
+                    </div>
+                    <div class="mb-2">
+                        <input type="text" class="form-control" id="uredi-build-opis" placeholder="Opis (opcionalno)">
+                    </div>
+                    <div class="d-flex gap-2">
+                        <button type="submit" class="btn btn-success btn-sm">Spremi</button>
+                        <button type="button" id="odustani-uredi-btn" class="btn btn-outline-secondary btn-sm">
+                            Odustani
+                        </button>
+                    </div>
+                </form>
+
+                <div class="card mb-3">
+                    <div class="card-header">Dodaj komponentu</div>
+                    <div class="card-body">
+                        <form id="komponenta-forma" class="row g-2 align-items-end">
+                            <div class="col-md-3">
+                                <label class="form-label small mb-0">Naziv</label>
+                                <input type="text" class="form-control" id="komponenta-naziv" required>
+                            </div>
+                            <div class="col-md-3">
+                                <label class="form-label small mb-0">Kategorija</label>
+                                <select class="form-select" id="komponenta-kategorija" required></select>
+                            </div>
+                            <div class="col-md-2">
+                                <label class="form-label small mb-0">Proizvođač</label>
+                                <input type="text" class="form-control" id="komponenta-proizvodac">
+                            </div>
+                            <div class="col-md-2">
+                                <label class="form-label small mb-0">Cijena (€)</label>
+                                <input type="number" step="0.01" min="0" class="form-control" id="komponenta-cijena"
+                                       required>
+                            </div>
+                            <div class="col-md-2">
+                                <button type="submit" class="btn btn-success w-100 text-nowrap">Dodaj</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+
+                <table class="table table-striped align-middle">
+                    <thead>
+                    <tr>
+                        <th>Komponenta</th>
+                        <th>Kategorija</th>
+                        <th>Proizvođač</th>
+                        <th class="text-end">Cijena</th>
+                        <th></th>
+                    </tr>
+                    </thead>
+                    <tbody id="redovi-komponenti"></tbody>
+                </table>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<script src="/js/script.js"></script>
+</body>
+</html>
